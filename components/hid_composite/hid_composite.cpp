@@ -432,7 +432,7 @@ void HIDComposite::key_tap(const std::string &key, uint8_t modifier) {
 }
 
 void HIDComposite::type(const std::string &text, uint32_t speed_ms, uint32_t jitter_ms) {
-  ESP_LOGI(TAG, "Type: %s (speed=%dms, jitter=%dms)", text.c_str(), speed_ms, jitter_ms);
+ 
   for (char c : text) {
     uint8_t keycode, mod;
     this->char_to_keycode(c, keycode, mod);
